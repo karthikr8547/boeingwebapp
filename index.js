@@ -1,7 +1,6 @@
-var express=require('node_modules/express');
-var app=express();
-app.get('/',function(req,res)
-{
-res.send('Hello World!');
-});
-var server=app.listen(3000,function() {});
+var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello World!');
+}).listen(8080);
